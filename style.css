@@ -1,0 +1,46 @@
+body, html{
+    margin: 0%;
+    padding: 0%;
+}
+
+.App {
+    text-align: center;
+    width: 500px;
+    background-color: #4f5663;
+    margin: 0px auto;
+    min-height: 200px;
+    padding: 2rem 1.6rem;
+    box-sizing: border-box;
+}
+  
+.App h2 {
+    margin: 1.5rem 0;
+}
+
+form {
+    margin: 2rem 0;
+}
+  
+form label, form input {
+    display: block;
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 1rem auto;
+    width: 90%;
+}
+  
+form input {
+    color: black;
+    padding: 3px;
+}
+  
+.btn {
+    margin: 1rem auto;
+    text-align: center;
+    outline: none;
+    border-radius: 5px;
+    font-size: 1.3rem;
+    padding: 5px 15px;
+    color: black;
+}
+

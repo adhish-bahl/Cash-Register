@@ -1,3 +1,8 @@
+* {
+    color: whitesmoke;
+    outline: none;
+}
+
 body, html{
     margin: 0%;
     padding: 0%;
@@ -18,7 +23,7 @@ body, html{
 }
 
 form {
-    margin: 2rem 0;
+    margin: 3rem 0px 1rem 0px;
 }
   
 form label, form input {
@@ -32,6 +37,7 @@ form label, form input {
 form input {
     color: black;
     padding: 3px;
+    border-radius: 10px;
 }
   
 .btn {
@@ -44,3 +50,6 @@ form input {
     color: black;
 }
 
+.message {
+    font-size: 1.2rem;
+}

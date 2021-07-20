@@ -11,19 +11,42 @@
     <div class="App">
         <h2>Cash Register Manager</h2>
         <p class="message">Enter the bill amount and cash given by the customer and know minimum number of notes to return.</p>
-        <form>
+        <form class="billAmount">
             <label for="billAmount">Bill Amount</label>
             <input type="number" name="billAmount" id="billAmount" />
             <button type="submit" class="btn">Next</button>
         </form>
         <p class="message" id="messageInvalidAmount">Enter valid bill amount</p>
-        <form>
+        <form class="cashGiven">
             <label for="cashGiven">Cash Given</label>
             <input type="number" name="cashGiven" id="cashGiven" />
             <button type="submit" class="btn">Check</button>
         </form>
         <p class="message" id="lessCashThanAmount">Cash is less than bill, please enter right amount</p>
         <p class="message" id="invalidCashBillAmount">Enter valid bill amount and cash given to continue</p>
+        <h2>Return Change:</h2>
+        <table>
+            <tr>
+                <th>No. of Notes:</th>
+                <td class="output 2000"></td>
+                <td class="output 500"></td>
+                <td class="output 100"></td>
+                <td class="output 20"></td>
+                <td class="output 10"></td>
+                <td class="output 5"></td>
+                <td class="output 1"></td>
+            </tr>
+            <tr>
+                <th>Note</th>
+                <td>2000</td>
+                <td>500</td>
+                <td>100</td>
+                <td>20</td>
+                <td>10</td>
+                <td>5</td>
+                <td>1</td>
+            </tr>
+        </table>
     </div>
 </body>
 </html>

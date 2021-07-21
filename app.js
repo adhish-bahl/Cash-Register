@@ -71,11 +71,11 @@ const calculateReturnAmount = (billCost, cashCost) => {
     let remainder = difference;
     const notes = [2000, 500, 100, 20, 10, 5, 1];
     for(let i = 0; remainder != 0; i++) {
-        if(remainder > notes[i]) {
+        if(remainder >= notes[i]) {
             let noOfNotes = Math.floor(remainder/notes[i]);
             console.log(noOfNotes);
             remainder -= notes[i] * noOfNotes;
-            outputSquare[i].innerText = `${noOfNotes}`;
+            outputSquare[i].textContent = `${noOfNotes}`;
         }
     }
 }

@@ -22,8 +22,7 @@ invalidCashBillAmount.style.display = "none";
 outputTable.style.display = "none";
 
 nextBtn.addEventListener("click", ()=>{
-    let billCost = billAmount.value;
-    billCost = parseInt(billCost);
+    let billCost = Number(billAmount.value);
     if(billCost <= 0) {
         messageInvalidAmount.style.display="block";
         cashGivenForm.style.display = "none";
@@ -40,11 +39,8 @@ nextBtn.addEventListener("click", ()=>{
 })
 
 checkBtn.addEventListener("click", () => {
-    let billCost = billAmount.value;
-    let cashCost = cashGiven.value;
-
-    billCost = parseInt(billCost);
-    cashCost = parseInt(cashCost);
+    let billCost = Number(billAmount.value);
+    let cashCost = Number(cashGiven.value);
 
     console.log(typeof billCost, typeof cashCost);
     if(billCost <= 0 || cashCost <= 0) {
@@ -54,7 +50,6 @@ checkBtn.addEventListener("click", () => {
         invalidCashBillAmount.style.display = "block";
         outputTable.style.display = "none";
     } else if(cashCost < billCost) {
-        console.log(billCost, cashCost);
         messageInvalidAmount.style.display = "none";
         cashGivenForm.style.display = "block";
         lessCashThanAmount.style.display = "block";
@@ -66,5 +61,17 @@ checkBtn.addEventListener("click", () => {
         lessCashThanAmount.style.display = "none";
         invalidCashBillAmount.style.display = "none";
         outputTable.style.display = "block";
+        calculateReturnAmount(billCost, cashCost);
     }
 })
+
+const calculateReturnAmount = (billCost, cashCost) => {
+    const difference = cashCost - billCost;
+    let remainder = difference;
+    const notes = [1, 5, 10, 20, 100, 500, 2000];
+    for(let i = notes.length - 1; remainder != 0; ) {
+        if(remainder > notes[i]) {
+            remainder -= notes[i];
+        }
+    }
+}

@@ -7,13 +7,14 @@ const checkBtn = document.querySelector(".checkBtn");
 const lessCashThanAmount = document.querySelector("#lessCashThanAmount");
 const invalidCashBillAmount = document.querySelector("#invalidCashBillAmount");
 const outputTable = document.querySelector(".outputTable");
-const N2000 = document.querySelector(".N2000");
-const N500 = document.querySelector(".N500");
-const N100 = document.querySelector(".N100");
-const N20 = document.querySelector(".N20");
-const N10 = document.querySelector(".N10");
-const N5 = document.querySelector(".N5");
-const N1 = document.querySelector(".N1");
+const output = document.querySelector(".output");
+// const N2000 = document.querySelector(".N2000");
+// const N500 = document.querySelector(".N500");
+// const N100 = document.querySelector(".N100");
+// const N20 = document.querySelector(".N20");
+// const N10 = document.querySelector(".N10");
+// const N5 = document.querySelector(".N5");
+// const N1 = document.querySelector(".N1");
 
 messageInvalidAmount.style.display = "none";
 cashGivenForm.style.display = "none";
@@ -68,8 +69,9 @@ checkBtn.addEventListener("click", () => {
 const calculateReturnAmount = (billCost, cashCost) => {
     const difference = cashCost - billCost;
     let remainder = difference;
-    const notes = [1, 5, 10, 20, 100, 500, 2000];
-    for(let i = notes.length - 1; remainder != 0; ) {
+    const notes = [2000, 500, 100, 20, 10, 5, 1];
+    for(let i = 0; remainder != 0; ) {
+        let noOfNotes = Math.floor(remainder/notes[i]);
         if(remainder > notes[i]) {
             remainder -= notes[i];
         }

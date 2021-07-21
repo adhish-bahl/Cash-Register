@@ -7,7 +7,7 @@ const checkBtn = document.querySelector(".checkBtn");
 const lessCashThanAmount = document.querySelector("#lessCashThanAmount");
 const invalidCashBillAmount = document.querySelector("#invalidCashBillAmount");
 const outputTable = document.querySelector(".outputTable");
-const output = document.querySelector(".output");
+const outputSquare = document.querySelector(".output");
 // const N2000 = document.querySelector(".N2000");
 // const N500 = document.querySelector(".N500");
 // const N100 = document.querySelector(".N100");
@@ -70,10 +70,12 @@ const calculateReturnAmount = (billCost, cashCost) => {
     const difference = cashCost - billCost;
     let remainder = difference;
     const notes = [2000, 500, 100, 20, 10, 5, 1];
-    for(let i = 0; remainder != 0; ) {
-        let noOfNotes = Math.floor(remainder/notes[i]);
+    for(let i = 0; remainder != 0; i++) {
         if(remainder > notes[i]) {
-            remainder -= notes[i];
+            let noOfNotes = Math.floor(remainder/notes[i]);
+            console.log(noOfNotes);
+            remainder -= notes[i] * noOfNotes;
+            outputSquare[i].innerText = `${noOfNotes}`;
         }
     }
 }

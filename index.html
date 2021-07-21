@@ -14,27 +14,27 @@
         <form class="billAmount">
             <label for="billAmount">Bill Amount</label>
             <input type="number" name="billAmount" id="billAmount" />
-            <button type="submit" class="btn">Next</button>
+            <button type="submit" class="btn nextBtn">Next</button>
         </form>
         <p class="message" id="messageInvalidAmount">Enter valid bill amount</p>
-        <form class="cashGiven">
+        <form class="cashGivenForm">
             <label for="cashGiven">Cash Given</label>
             <input type="number" name="cashGiven" id="cashGiven" />
-            <button type="submit" class="btn">Check</button>
+            <button type="submit" class="btn checkBtn">Check</button>
         </form>
         <p class="message" id="lessCashThanAmount">Cash is less than bill, please enter right amount</p>
         <p class="message" id="invalidCashBillAmount">Enter valid bill amount and cash given to continue</p>
-        <h2>Return Change:</h2>
-        <table>
+        <table class="table">
+            <h2>Return Change:</h2>
             <tr>
                 <th>No. of Notes:</th>
-                <td class="output 2000"></td>
-                <td class="output 500"></td>
-                <td class="output 100"></td>
-                <td class="output 20"></td>
-                <td class="output 10"></td>
-                <td class="output 5"></td>
-                <td class="output 1"></td>
+                <td class="output N2000"></td>
+                <td class="output N500"></td>
+                <td class="output N100"></td>
+                <td class="output N20"></td>
+                <td class="output N10"></td>
+                <td class="output N5"></td>
+                <td class="output N1"></td>
             </tr>
             <tr>
                 <th>Note</th>
@@ -48,5 +48,6 @@
             </tr>
         </table>
     </div>
+    <script src="app.js"></script>
 </body>
 </html>

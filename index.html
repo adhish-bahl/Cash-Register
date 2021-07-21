@@ -14,16 +14,19 @@
         <form class="billAmount">
             <label for="billAmount">Bill Amount</label>
             <input type="number" name="billAmount" id="billAmount" />
-            <button type="submit" class="btn nextBtn">Next</button>
+            <button type="button" class="btn nextBtn">Next</button>
         </form>
         <p class="message" id="messageInvalidAmount">Enter valid bill amount</p>
-        <form class="cashGivenForm">
+        <div class="cashGivenForm">
+        <form>
             <label for="cashGiven">Cash Given</label>
             <input type="number" name="cashGiven" id="cashGiven" />
-            <button type="submit" class="btn checkBtn">Check</button>
+            <button type="button" class="btn checkBtn">Check</button>
         </form>
+        </div>
         <p class="message" id="lessCashThanAmount">Cash is less than bill, please enter right amount</p>
         <p class="message" id="invalidCashBillAmount">Enter valid bill amount and cash given to continue</p>
+        <div class="outputTable">
         <table class="table">
             <h2>Return Change:</h2>
             <tr>
@@ -47,6 +50,7 @@
                 <td>1</td>
             </tr>
         </table>
+    </div>
     </div>
     <script src="app.js"></script>
 </body>
